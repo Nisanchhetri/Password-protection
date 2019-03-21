@@ -1,0 +1,18 @@
+list = [24, 56, 32, 14, 67, 98, 34, 76, 14, 890, 67, 789, 56789, 43, 234, 67, 5, 3, 0]
+while True:
+
+    for j in range(len(list)-1):
+        if list[j] > list[j+1]:
+            temp = list[j]
+            list[j] = list[j+1]
+            list[j+1] = temp
+        n = j
+        while n != 0:
+            for i in range(j):
+                if list[n] < list[n-1]:
+                    temp = list[n]
+                    list[n] = list[n - 1]
+                    list[n - 1] = temp
+                n-= 1
+    print(list)
+    break
